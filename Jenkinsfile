@@ -19,6 +19,6 @@ node(){
 			}
 		}
 		stage('Expose report'){
-			cucumber fileIncludePattern: '**/target/site/results.json', sortingMethod: 'ALPHABETICAL'
+			cucumber '**/target/site/results.json'
 		}
 }
