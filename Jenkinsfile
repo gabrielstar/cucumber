@@ -23,7 +23,7 @@ node(){
 				allowMissing: false,
 				alwaysLinkToLastBuild: false,
 				keepAll: true,
-				reportDir: '**/target/**',
+				reportDir: 'target/cucumber',
 				reportFiles: 'index.html',
 				reportName: "Cucumber report"
 				])
