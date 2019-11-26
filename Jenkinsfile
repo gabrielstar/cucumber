@@ -11,7 +11,7 @@ node(){
 		git branch:'master',credentialsId:'',url:repoURL
 		}
 		stage('Cucumber Tests'){
-			withMaven(globalMavenSettingsConfig:'MavenSettings',maven:'Maven3.5.3'){
+			withMaven(maven:'maven35'){
 				sh """
 					cd ${env.WORKSPACE_LOCAL}
 					mvn clean test
