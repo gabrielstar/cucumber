@@ -19,6 +19,6 @@ node(){
 			}
 		}
 		stage('Expose report'){
-			cucumber '**/target/site/results.json'
+			cucumber '**/cucumber.json'
 		}
 }
