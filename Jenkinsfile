@@ -18,4 +18,14 @@ node(){
 				"""
 			}
 		}
+		stage('Expose report'){
+			publishHTML (target: [
+				allowMissing: false,
+				alwaysLinkToLastBuild: false,
+				keepAll: true,
+				reportDir: '**/target/**',
+				reportFiles: 'index.html',
+				reportName: "Cucumber report"
+				])
+		}
 }
