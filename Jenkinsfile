@@ -14,6 +14,6 @@ node(){
 			sh """
 				cd ${env.WORKSPACE_LOCAL}
 				mvn clean test
-			""""
+			"""
 		}
 }
