@@ -19,13 +19,6 @@ node(){
 			}
 		}
 		stage('Expose report'){
-			publishHTML (target: [
-				allowMissing: false,
-				alwaysLinkToLastBuild: false,
-				keepAll: true,
-				reportDir: 'target/cucumber',
-				reportFiles: 'index.html',
-				reportName: "Cucumber report"
-				])
+			cucumber fileIncludePattern: '**/target/site/results.json', sortingMethod: 'ALPHABETICAL'
 		}
 }
