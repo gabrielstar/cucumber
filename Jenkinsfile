@@ -23,8 +23,6 @@ node(){
 			cucumber '**/cucumber.json'
 		}
 		stage('Import results to Xray'){
-			steps{
-				step([$class:'XrayImportBuilder',endpointName:'/cucumber',importFilePath:'target/cucumber.json',projectKey: 'DEMO',serverInstance:'27b4bb80-25c8-439e-a68a-b7e89fa5d038'])
-			}
+				step([$class:'XrayImportBuilder',endpointName:'/cucumber',importFilePath:'target/cucumber.json',projectKey: 'XRAY',serverInstance:'27b4bb80-25c8-439e-a68a-b7e89fa5d038'])
 		}
 }
