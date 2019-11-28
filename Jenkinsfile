@@ -46,7 +46,7 @@ node(){
 					"id": "''' + testExecutionFieldId + '''"
 				},
 				"''' + testEnvironmentFieldName + '''" : [
-					"'''+DEV1+'''"
+					"''' + environment + '''"
 				]
 				}
 			}''', inputInfoSwitcher: 'fileContent', serverInstance: xrayConnectorId])
