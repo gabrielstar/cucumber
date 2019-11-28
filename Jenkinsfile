@@ -30,25 +30,26 @@ node(){
 			def labels = '["automated_regression","regression"]'
 			def environment = "DEV1"
 			def testExecutionFieldId = 10007
-			def testEnvironmentFieldName = "customfield_10132s"
+			def testEnvironmentFieldName = "customfield_10132"
 			def projectKey = "XRAY"
 			def xrayConnectorId = 'server-27b4bb80-25c8-439e-a68a-b7e89fa5d038'
-
-			step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'target/cucumber.json', importInfo: '''{
-			"fields": {
-				"project": {
+			def info = '''{
+				"fields": {
+					"project": {
 					"key": "''' + projectKey + '''"
-				},
-				"labels":''' + labels + ''',
-				"description":"''' + description + '''",
-				"summary": "Automated Regression Execution",
-				"issuetype": {
-					"id": "''' + testExecutionFieldId + '''"
-				},
-				"''' + testEnvironmentFieldName + '''" : [
-					"''' + environment + '''"
-				]
-				}
-			}''', inputInfoSwitcher: 'fileContent', serverInstance: xrayConnectorId])
+					},
+					"labels":''' + labels + ''',
+					"description":"''' + description + '''",
+					"summary": "Automated Regression Execution",
+					"issuetype": {
+						"id": "''' + testExecutionFieldId + '''"
+					},
+					"''' + testEnvironmentFieldName + '''" : [
+						"''' + environment + '''"
+					]
+					}
+				}'''
+
+			step([$class: 'XrayImportBuilder', endpointName: '/cucumber/multipart', importFilePath: 'target/cucumber.json', importInfo: info, inputInfoSwitcher: 'fileContent', serverInstance: xrayConnectorId])
 		}
 }
