@@ -24,15 +24,15 @@ node() {
         archive "**/cucumber.json"
         cucumber '**/cucumber.json'
     }
-		stage('Import results to Xray') {
+	stage('Import results to Xray') {
 
 		def description = "[BUILD_URL|${env.BUILD_URL}]"
-		def labels = '["automated_regression","regression"]'
+		def labels = '["label1","label2"]'
 		def environment = "DEV1"
-		def testExecutionFieldId = 10007
-		def testEnvironmentFieldName = "customfield_10132"
-		def projectKey = "MONKEY"
-		def xrayConnectorId = 'b2a15e07-f9c6-44b0-9519-1c50d99af275'
+		def testExecutionFieldId = NUMBER
+		def testEnvironmentFieldName = "customfield_NUMBER"
+		def projectKey = "KEY"
+		def xrayConnectorId = 'ID'
 		def info = '''{
 				"fields": {
 					"project": {
