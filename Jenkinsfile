@@ -15,8 +15,8 @@ node() {
     stage('Cucumber Tests') {
         withMaven(maven: 'maven35') {
             sh """
-		cd ${env.WORKSPACE_LOCAL}
-		mvn clean test
+			cd ${env.WORKSPACE_LOCAL}
+			mvn clean test
 		"""
         }
     }
@@ -27,12 +27,12 @@ node() {
 	stage('Import results to Xray') {
 
 		def description = "[BUILD_URL|${env.BUILD_URL}]"
-		def labels = '["label1","label2"]'
-		def environment = "DEV1"
-		def testExecutionFieldId = NUMBER
-		def testEnvironmentFieldName = "customfield_NUMBER"
-		def projectKey = "KEY"
-		def xrayConnectorId = 'ID'
+		def labels = '["regression","automated_regression"]'
+		def environment = "DEV"
+		def testExecutionFieldId = 10007
+		def testEnvironmentFieldName = "customfield_10132"
+		def projectKey = "WOO"
+		def xrayConnectorId = '3ecdab2a-9ccb-4b99-99cb-2312e9135dc5'
 		def info = '''{
 				"fields": {
 					"project": {
