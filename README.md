@@ -1,7 +1,7 @@
 # cucumber
 Basic cucumber tests structure with examples, of data tables, examples and background. Small Jenkins pipeline inside.
 
-Starting with cucumber? Use this repository to see hwo a complete maven project with cucumber looks like.
+Starting with cucumber? Use this repository to see how a complete maven project with cucumber looks like.
 
 It contains:
 - example structure for the project (pom file)
