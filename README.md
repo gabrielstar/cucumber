@@ -5,10 +5,15 @@ Starting with cucumber? Use this repository to see hwo a complete maven project 
 
 It contains:
 - example structure for the project (pom file)
+
 - basic cucumber test types:
+
 -- basic test
+
 -- datatables tests
+
 -- scenario outline
+
 -- background example
 
 Just run
