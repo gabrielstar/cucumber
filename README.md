@@ -8,13 +8,13 @@ It contains:
 
 - basic cucumber test types:
 
--- basic test
+- basic test
 
--- datatables tests
+- datatables tests
 
--- scenario outline
+- scenario outline
 
--- background example
+- background example
 
 Just run
 
